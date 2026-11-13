@@ -91,7 +91,10 @@ function ReceitasFavoritas() {
             src={ shareIcon }
             alt="share"
             data-testid={ `${index}-horizontal-share-btn` }
-            onClick={ () => setMessage([true, index]) || copy(`http://localhost:3000/${data.type}s/${data.id}`) }
+            onClick={ () => {
+              setMessage([true, index]);
+              copy(`${window.location.origin}/${data.type}s/${data.id}`);
+            } }
           />
           { message ? renderMessage(index, message[1]) : null }
           <input

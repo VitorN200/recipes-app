@@ -55,7 +55,7 @@ function Details(props) {
 
   function shareButtonClick() {
     setMessage(true);
-    copy(`http://localhost:3000${history.location.pathname}`);
+    copy(`${window.location.origin}${history.location.pathname}`);
   }
 
   function renderDetails() {

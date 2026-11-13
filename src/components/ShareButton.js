@@ -21,7 +21,7 @@ function ShareButton(props) {
         src={ shareIcon }
         alt="share"
         data-testid="share-btn"
-        onClick={ () => setMessage(true) || copy(`http://localhost:3000${path}`) }
+        onClick={ () => setMessage(true) || copy(`${window.location.origin}${path}`) }
       />
       { message ? renderMessage() : null }
     </>
