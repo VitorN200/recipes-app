@@ -1,0 +1,79 @@
+/*
+  Ajustes de layout para telas mais largas que o celular.
+  O app foi desenhado para uma coluna de até 600px (celular). Em telas menores que isso
+  nada muda; as regras abaixo corrigem elementos que eram medidos pela janela inteira e
+  adaptam o conteúdo quando há mais espaço.
+*/
+
+/* Login: a largura é a da coluna, e não a da janela inteira (100vw) */
+.login-background {
+  width: 100%;
+}
+
+/* Rodapé fixo: acompanha a coluna central em vez de se esticar pela janela */
+.footer {
+  left: 0;
+  margin: 0 auto;
+  max-width: 600px;
+  right: 0;
+}
+
+/* Botão "Iniciar receita" (fixo): acima de 600px centraliza na coluna, com largura máxima.
+   Até 600px (celular) permanece exatamente como estava. */
+@media (min-width: 601px) {
+  .start-recipe-btn {
+    left: 0;
+    margin: 0 auto 7px;
+    max-width: 480px;
+    right: 0;
+  }
+}
+
+/* A partir de 768px: layout de computador */
+@media (min-width: 768px) {
+  /* Coluna central mais larga que a do celular (antes: 600px) */
+  html body,
+  .footer {
+    max-width: 960px;
+  }
+
+  /* Receitas: grade de 3 colunas no lugar de um cartão por linha */
+  .recipe-list {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 90px;
+    padding: 25px 5% 0;
+  }
+
+  .recipe-list button {
+    margin-bottom: 0;
+  }
+
+  .recipe-list p {
+    font-size: 22px;
+  }
+
+  /* Receitas feitas e favoritas: 2 colunas */
+  .saved-recipes {
+    column-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 25px 5% 0;
+  }
+
+  /* Explorar e perfil: botões em uma coluna estreita e centralizada */
+  .explore-container,
+  .profile-container {
+    margin: 0 auto;
+    max-width: 520px;
+    width: 100%;
+  }
+
+  /* Detalhe e receita em andamento: foto com altura limitada */
+  .detailsDiv img,
+  .inProgressDiv .inProgressImg {
+    height: 420px;
+    object-fit: cover;
+  }
+}

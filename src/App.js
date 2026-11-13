@@ -7,6 +7,7 @@ import { Comidas, Bebidas, Login, Perfil, DetalhesComida,
   ReceitasFeitas, ReceitasFavoritas } from './pages/index';
 
 import './App.css';
+import './css/Desktop.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
