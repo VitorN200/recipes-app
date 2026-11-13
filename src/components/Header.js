@@ -5,7 +5,6 @@ import profile from '../images/profileIcon.svg';
 import search from '../images/searchIcon.svg';
 import double from '../images/double.svg';
 import Input from './Inputs';
-import Button from './Button';
 import getResultFromAPI from '../api/getResultFromAPI';
 import contextRecipes from '../context/Context';
 
