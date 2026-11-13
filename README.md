@@ -4,9 +4,12 @@ Aplicação web de receitas de **comidas e bebidas**, desenvolvida em **React** 
 
 O app consome APIs públicas de receitas e permite buscar, explorar, favoritar, compartilhar e acompanhar o preparo de pratos e drinks, tudo no navegador, sem backend próprio.
 
-> 📌 **Repositório original (com o histórico completo do projeto na turma):** [VitorN200/sd-08-project-recipes-app, branch `main-group-23`](https://github.com/VitorN200/sd-08-project-recipes-app/tree/main-group-23)
+> 📌 **Repositório original (com o histórico completo do projeto na turma):** [VitorN200/sd-08-project-recipes-app](https://github.com/VitorN200/sd-08-project-recipes-app)
 >
-> Este repositório contém o código da branch do nosso grupo, com o histórico de commits preservado, além de ajustes feitos depois para facilitar a execução e a publicação (veja [Melhorias após o projeto](#-melhorias-após-o-projeto)).
+> - Branch da entrega, com os requisitos funcionais: [`main-group-23`](https://github.com/VitorN200/sd-08-project-recipes-app/tree/main-group-23)
+> - Branch com a versão estilizada: [`main-group-23-css`](https://github.com/VitorN200/sd-08-project-recipes-app/tree/main-group-23-css)
+>
+> Este repositório reúne as duas versões, com o histórico de commits preservado, além de ajustes feitos depois para facilitar a execução e a publicação (veja [Melhorias após o projeto](#-melhorias-após-o-projeto)).
 
 ---
 
@@ -15,6 +18,7 @@ O app consome APIs públicas de receitas e permite buscar, explorar, favoritar, 
 - **Projeto em grupo**, desenvolvido durante o módulo de front-end.
 - O objetivo era aplicar, em um app completo, os conteúdos do módulo: componentização, rotas, estado global com Context API, consumo de APIs, hooks e testes.
 - O projeto foi entregue com **todos os requisitos de avaliação atendidos**.
+- Em abril de 2021, depois que os requisitos passaram, o visual do app foi desenvolvido por mim em uma branch separada (`main-group-23-css`), que está incorporada a este repositório.
 
 ## 🏆 Reconhecimento
 
@@ -29,11 +33,13 @@ Atuei no desenvolvimento do front-end e também na integração do trabalho do g
 - **Rodapé (Footer)** de navegação entre as seções.
 - **Telas de Explorar**: explorar comidas e bebidas, busca por ingredientes e por origem.
 - **Tela de Perfil** e **tela de Receitas Feitas**.
+- **Estilização do app:** CSS das telas de login, Comidas, Bebidas, Explorar, Detalhes da receita, Receita em andamento, Perfil, Receitas Feitas e Receitas Favoritas, além da inclusão da logo, da animação de abertura da barra de pesquisa e da troca dos ícones de favoritar e compartilhar.
+- **Correção de bug:** erro ao finalizar uma receita de bebida.
 - **Integração e qualidade:** revisão e merge dos Pull Requests do grupo, resolução de conflitos entre branches, correção de erros de lint e ajustes finais até todos os requisitos passarem.
 
 ## ✨ Funcionalidades
 
-- Login simulado (e-mail válido e senha com mais de 6 caracteres), sem backend.
+- **Login simulado**, sem backend: use qualquer e-mail em formato válido (por exemplo, `teste@email.com`) e uma senha com **7 ou mais caracteres** (por exemplo, `1234567`).
 - Listagem de **comidas** e **bebidas**, com filtro por categoria.
 - **Busca** pelo cabeçalho: por ingrediente, nome ou primeira letra.
 - **Explorar** receitas por ingrediente, por origem (comidas) ou com a opção **"Me Surpreenda!"** (receita aleatória).
