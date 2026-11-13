@@ -11,6 +11,8 @@ O app consome APIs públicas de receitas e permite buscar, explorar, favoritar, 
 >
 > Este repositório reúne as duas versões, com o histórico de commits preservado, além de ajustes feitos depois para facilitar a execução e a publicação (veja [Melhorias após o projeto](#-melhorias-após-o-projeto)).
 
+Link para visualização: https://recipes-app-five-lilac.vercel.app/
+
 ---
 
 ## 👥 Contexto do projeto
