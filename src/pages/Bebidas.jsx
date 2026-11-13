@@ -24,13 +24,13 @@ const Bebidas = () => {
         setMain('');
       }
 
-      setDrinks(drinksAPI);
+      setDrinks(drinksAPI || []);
     }
     getDrinksFromAPI();
   }, []);
 
   useEffect(() => {
-    setDrinks(filter);
+    setDrinks(filter || []);
   }, [filter]);
 
   const filterByCategory = async (category, { target: { innerHTML } }) => {
@@ -42,12 +42,12 @@ const Bebidas = () => {
       filterdBtn = await getResultFromAPI('/bebidas');
       setTargetButton('');
     }
-    setDrinks(filterdBtn);
+    setDrinks(filterdBtn || []);
   };
 
   async function filterAll() {
     const filterAllApi = await getResultFromAPI('/bebidas');
-    setDrinks(filterAllApi);
+    setDrinks(filterAllApi || []);
   }
 
   return (

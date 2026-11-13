@@ -22,13 +22,13 @@ const Comidas = () => {
         mealsAPI = await getResultFromAPI('/comidas', 'Ingredients', mainIngredient);
         setMain('');
       }
-      setMeals(mealsAPI);
+      setMeals(mealsAPI || []);
     }
     getMealsFromAPI();
   }, []);
 
   useEffect(() => {
-    setMeals(filter);
+    setMeals(filter || []);
   }, [filter]);
 
   const filterByCategory = async (category, { target: { innerHTML } }) => {
@@ -40,12 +40,12 @@ const Comidas = () => {
       filterdBtn = await getResultFromAPI('/comidas');
       setTargetButton('');
     }
-    setMeals(filterdBtn);
+    setMeals(filterdBtn || []);
   };
 
   async function filterAll() {
     const filterAllApi = await getResultFromAPI('/comidas');
-    setMeals(filterAllApi);
+    setMeals(filterAllApi || []);
   }
 
   return (
