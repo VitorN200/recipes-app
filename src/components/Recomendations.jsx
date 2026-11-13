@@ -13,8 +13,12 @@ function Recomendations() {
   useEffect(() => {
     async function getFood() {
       const drinkOrFood = alternatePath(pathname);
-      const foods = await getResultFromAPI(drinkOrFood);
-      setRecomended(foods.slice(0, SIX_RECOMMENDATIONS));
+      try {
+        const foods = await getResultFromAPI(drinkOrFood);
+        setRecomended((foods || []).slice(0, SIX_RECOMMENDATIONS));
+      } catch (error) {
+        setRecomended([]);
+      }
     }
     getFood();
   }, []);
