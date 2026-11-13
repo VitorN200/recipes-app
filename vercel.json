@@ -1,0 +1,8 @@
+{
+  "installCommand": "CYPRESS_INSTALL_BINARY=0 npm ci",
+  "buildCommand": "CI=false NODE_OPTIONS=--openssl-legacy-provider npm run build",
+  "outputDirectory": "build",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

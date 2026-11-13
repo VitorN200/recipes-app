@@ -97,6 +97,16 @@ npx serve -s build
 
 O parâmetro `-s` é necessário porque o app usa rotas do lado do cliente (`BrowserRouter`).
 
+### ▲ Deploy na Vercel
+
+O repositório já inclui um `vercel.json` com tudo o que o app antigo precisa para ser publicado, então basta importar o projeto na Vercel (o framework Create React App é detectado automaticamente):
+
+- **Instalação:** `CYPRESS_INSTALL_BINARY=0 npm ci`, para não baixar o binário do Cypress, que só é usado nos testes.
+- **Build:** `CI=false NODE_OPTIONS=--openssl-legacy-provider npm run build`. O `CI=false` evita que avisos de lint derrubem o build, e o `NODE_OPTIONS` contorna o erro de criptografia do `react-scripts` 3.4.1 em Node 17+.
+- **Rotas:** todas as URLs são redirecionadas para o `index.html`, para o React Router funcionar ao abrir direto links como `/comidas/52771`.
+
+Se o build falhar na versão de Node padrão da Vercel, escolha o Node 22 ou 20 em **Settings → Build and Deployment → Node.js Version**.
+
 ### Testes (Cypress)
 
 Com o app rodando em `http://localhost:3000`:
