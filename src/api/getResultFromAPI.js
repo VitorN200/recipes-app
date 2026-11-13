@@ -26,11 +26,14 @@ async function getResultFromAPI(path, filter = 'busca por nome', text = '') {
   const fetchURL = `${urlString[b]}${filterString[a]}${text}`;
   const apiResultJSON = await fetch(fetchURL);
   const apiResult = await apiResultJSON.json();
-  if (apiResult.meals === null || apiResult.drinks === null) {
+  const result = apiResult[objParameter[b]];
+  // A API devolve null, ou até uma string ("no data found"), quando não há resultado.
+  // Só repassa listas de verdade, para quem chamou poder usar .map/.slice com segurança.
+  if (!Array.isArray(result)) {
     return null;
   } if (text === 'a=list') {
-    return apiResult[objParameter[b]];
-  } return apiResult[objParameter[b]].slice(0, TWELVE_FILTER);
+    return result;
+  } return result.slice(0, TWELVE_FILTER);
 }
 
 export default getResultFromAPI;
